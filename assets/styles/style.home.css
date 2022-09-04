@@ -1,0 +1,336 @@
+
+
+/* @font-face {
+    font-family: "Rammetto One";
+    src: url('myfont.woff2') format('woff2'),
+         url('../fonts/') format('woff'),
+         url('../fonts/RammettoOne-Regular.ttf') format('truetype');
+  } */
+
+@font-face {
+    font-family: "Rammetto One";
+    src: url('../fonts/RammettoOne-Regular.ttf') format('truetype');    
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url('../fonts/lato-regular-webfont.woff') format('woff'),
+        url('../fonts/lato-regular-webfont.ttf') format('truetype');
+}
+  
+ @font-face {
+    font-family: "Roboto";
+    src: url('../fonts/roboto-regular-webfont.woff') format('woff'),
+        url('../fonts/roboto-regular-webfont.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Marga";
+    src: url('../fonts/magra-bold-webfont.woff') format('woff'),
+        url('../fonts/magra-bold-webfont.ttf') format('truetype');
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* header start_______________________________ */
+.header_bg {
+    background-color: #edeaeb;
+}
+
+.header {
+    box-sizing: border-box;
+    
+    height: 120px;
+    padding-left: 110px;
+    padding-right: 110px;
+    margin: 0 auto;
+    
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header_logo {
+    display: inline-flex;
+    align-items: center;
+    width: 138px;
+    position: relative; 
+}
+
+.header_logo > span {
+    font-family: "Rammetto One";
+    color: #cb3362;
+    font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: -0.16px;
+}
+
+.header_logo span > span {
+    color: #c8c10d;
+    font-style: normal;
+    letter-spacing: -0.16px;
+    line-height: normal;
+    /* position: relative; */ 
+}
+
+.header_logo > span::after {
+    content: "";
+    position: absolute;
+    top: 35px;
+    right: 17px;
+    
+    width: 21px;
+    height: 14px;
+    
+    background-image: url("../img/logo_name.png");
+    background-repeat: no-repeat;
+}
+
+.header_menu {
+    max-height: 120px;
+    margin: auto 0 auto auto;
+}
+
+.header_list {
+    display: flex;
+}
+
+.header_list  > li {
+    padding-left: 37px;
+    padding-right: 37px; 
+}
+
+.header_list li:last-child {
+    padding-right: 0;
+}
+
+.header_list a {
+    display: block;
+    box-sizing: border-box;
+    
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    color: #7a6666;
+    font-family: "Lato";
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    
+    transition: 1s scale, color;
+}
+
+.header_list a:active,
+.header_list a:focus {
+    color: #cb3362;
+    scale: 1.1;
+}
+
+.header_list a:hover {
+    color: #c8c10d;
+    scale: 1.1;
+}
+nav > ul {
+    position: relative;
+}
+
+ nav > ul  ul {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s ease-in;
+    display: none;
+    top: 35px; 
+ }
+
+.header_list > li:hover  ul {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+/* header end________________________________ */
+
+/* main start_________________________________ */
+
+/* section__images start*/
+.yogurts_bg {
+    /* background-color: #f6f2f2; */
+    background-color: #f8f8f8;
+}
+
+.yogurts {
+    height: 660px;
+}
+
+.bg_waves {
+    height: 660px;
+    background-image: url(../img/bg_yogurts.png);
+    background-position: center bottom -84px ;
+    background-repeat: no-repeat;
+}
+
+.bg_yog {
+    height: 660px;
+    background-image: url(../img/yogurt_1.png);
+    background-position-x: center;
+    background-position-y: -10px;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.delight {
+    position: absolute;
+    right: 193px;
+    bottom: 73px;
+}
+
+
+/* section__images end */
+
+/* section__newproduct start */
+.newprod_bg {
+    background-color: #eae7e8;
+}
+
+.newprod {
+box-sizing: border-box;
+
+display: flex;
+padding-top: 52px;
+padding-left: 110px;
+padding-right: 110px;
+justify-content: space-between;
+}
+
+.newprod_article {
+width: 554px
+}
+
+.newprod_article p {
+    padding: 0;
+    margin: 0;
+}
+
+.newprod_article > p:first-child {
+    color:#4c4b45;
+    font-family: "Roboto";
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 24px;
+}
+
+.newprod_article h1 {
+    font-family: "Marga";
+    font-size: 30px;
+    font-weight: 700;
+    color:#cb3362;
+}
+
+.newprod_article h1 + p {
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: 400;
+    color:#4c4b45;
+    line-height: 24px;
+}
+
+.newprod_image {
+    display: inline-block;
+    align-self:flex-end;
+}
+/* section__newproduct end */
+
+/* section__advantages start */
+.advantages_bg {
+    background-color: #c8c10d;
+}
+
+.advantages {
+    height: 160px;
+    display: flex;
+}
+
+.advantages_list span {
+    font-family: "Lato";
+    font-size: 20px;
+    font-weight: 400;
+    color: #ffffff;
+    text-transform:uppercase;    
+}
+
+.advantages_list {
+    width: 815px;
+    height: 78px;
+    margin: 40px auto 42px auto;
+  
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.advantages_item  {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+/* section__advantages end */
+ 
+/* main end_____________________________________*/
+
+/* footer start________________________________ */
+.footer_bg {
+    background-color: #cb3362 ;
+}
+
+.footer {
+    margin: 0 auto;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact_list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 59px;
+    margin-bottom: 35px;
+    width: 210px;
+}
+
+.contact_link {
+    text-decoration: none;
+    padding: 0;
+}
+
+.contact_list li {
+}
+
+.copyright {
+color: #ffffff;
+font-family: "Roboto";
+font-size: 12px;
+line-height: 15px;
+text-align: center;
+}
+
+.footer img {
+    width: 30px;
+    height: 30px;
+}
+/* footer end ____________________________________*/
+
+
+

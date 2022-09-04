@@ -7,7 +7,7 @@
          url('../fonts/RammettoOne-Regular.ttf') format('truetype');
   } */
 
-@font-face {
+  @font-face {
     font-family: "Rammetto One";
     src: url('../fonts/RammettoOne-Regular.ttf') format('truetype');    
 }
@@ -30,10 +30,14 @@
         url('../fonts/magra-bold-webfont.ttf') format('truetype');
 }
 
+
 a {
     text-decoration: none;
 }
 
+h1 {
+    margin: 0 0;
+}
 .container {
     max-width: 1140px;
     margin: 0 auto;
@@ -161,134 +165,121 @@ nav > ul {
 }
 /* header end________________________________ */
 
-/* main start_________________________________ */
-
-/* section__images start*/
-.yogurts_bg {
-    background-color: #f6f2f2;
-}
-
-.yogurts {
-    height: 660px;
-    overflow: hidden;
-    position: relative;
-}
-
-.yogurts img {
-    display: block;
-}
-
-.yogurts > img:first-child {
-    position: absolute;
-    bottom: -84px;
-}
-
-.yogurts > img:nth-child(2) {
-    position: absolute;
-    left: 31px;
-}
-
-.yogurts > img:nth-child(3) {
-    position: absolute;
-    bottom: 80px;
-    right: 185px;
-}
-/* section__images end */
-
-/* section__newproduct start */
-.newprod_bg {
-    background-color: #eae7e8;
-}
-
-.newprod {
-box-sizing: border-box;
-
-display: flex;
-padding-top: 52px;
-padding-left: 110px;
-padding-right: 110px;
-justify-content: space-between;
-}
-
-.newprod_article {
-width: 554px
-}
-
-.newprod_article p {
-    padding: 0;
-    margin: 0;
-}
-
-.newprod_article > p:first-child {
-    color:#4c4b45;
-    font-family: "Roboto";
-    font-size: 15px;
-    font-weight: 400;
-    text-transform: uppercase;
-    line-height: 24px;
-}
-
-.newprod_article h1 {
-    font-family: "Marga";
-    font-size: 30px;
-    font-weight: 700;
-    color:#cb3362;
-}
-
-.newprod_article h1 + p {
-    font-family: "Roboto";
-    font-size: 14px;
-    font-weight: 400;
-    color:#4c4b45;
-    line-height: 24px;
-}
-
-.newprod_image {
-    display: inline-block;
-    align-self:flex-end;
-}
-/* section__newproduct end */
-
-/* section__advantages start */
-.advantages_bg {
+/* main start________________________________ */
+.about_bg {
     background-color: #c8c10d;
+    height: 81px;
+    /* box-sizing: border-box; */
 }
 
-.advantages {
-    height: 160px;
-    display: flex;
-}
-
-.advantages_list span {
+.about_h {
     font-family: "Lato";
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 400;
     color: #ffffff;
-    text-transform:uppercase;    
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 81px;
 }
 
-.advantages_list {
-    width: 815px;
-    height: 78px;
-    margin: 40px auto 42px auto;
-  
-    display: inline-flex;
+.image_bg {
+    background-color:   #ebebed; ;
+}
+
+.image {
+    height: 250px;
+    /* overflow: hidden; */
+    background-image: url(../img/about.1.png);
+    background-position: center -89px;
+    background-repeat: no-repeat;
+}
+
+.text_bg {
+    background-color: #fff;
+}
+
+.main_container {
+    padding: 41px 132px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    padding: 41px 132px;
 }
 
-.advantages_item  {
-    display: inline-flex;
+.main_container h2 {
+    text-transform: uppercase;
+}
+
+.main_container a {
+    color:#c8c10d;
+    text-decoration: underline;
+}
+
+.main_container a:hover {
+    color:  #cb3362;
+    text-decoration: underline;
+}
+
+.sidebar {
+    width: 280px;
+    height: 600px;
+    box-sizing: border-box;
+    background-color:#efedee;
+    padding: 38px 41px 34px;
+    
+    display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: space-between;
 }
-/* section__advantages end */
- 
-/* main end_____________________________________*/
+
+.sidebar h2 {
+    font-family: "Lato";
+    font-size: 24px;
+    font-weight: 400;
+    color:  #cb3362;
+    line-height: 48px;
+    text-align: center;
+}
+
+.sidebar p {
+    font-family: "Roboto";
+    font-size: 16px;
+    font-weight: 400;
+    color:  #7a6666;
+    line-height: 48px;
+    text-align: center; 
+}
+
+.main_text {
+    width: 555px;
+    height: 668px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main_text h2 {
+    font-family: "Lato";
+    font-size: 24px;
+    font-weight: 400;
+    color: #cb3362;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.main_text p {
+    font-family: "Roboto";
+    font-size: 14px;
+    line-height: 24px;
+    color: #7a6666;
+}
+/* main end____________________________________ */
 
 /* footer start________________________________ */
 .footer_bg {
-    background-color: #cb3362 ;
+    background-color: #cb3362;
 }
 
 .footer {
@@ -329,6 +320,3 @@ text-align: center;
     height: 30px;
 }
 /* footer end ____________________________________*/
-
-
-
