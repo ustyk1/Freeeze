@@ -40,6 +40,10 @@ a {
     padding: 0;
 }
 
+.header_link.active_page {
+    color:#cb3362;
+}
+
 /* header start_______________________________ */
 .header_bg {
     background-color: #edeaeb;
