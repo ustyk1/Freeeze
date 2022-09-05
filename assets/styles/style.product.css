@@ -202,9 +202,130 @@ nav > ul {
     text-transform: uppercase;
     line-height: 81px;
 }
+/* _______________________________________________ */
 
+.container.products {
+    height: 1000px;
+    padding: 50px 110px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
+.yogurt_kind {
+    height: 275px;
+    width: 920px; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
 
+.yogurt_kind:nth-of-type(3) {
+    margin-top: 40px;
+}
+
+.kind_descriptions {
+    width: 190px;
+    height: 150px;
+    align-self: center;
+}
+
+.description_title {
+    font-family: "Marga";
+    font-size: 24px;
+    font-weight: 700;
+    color: #cb3362;
+    line-height: 24px;
+    margin-bottom: 30px;
+}
+
+.description_text {
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: 400;
+    color: #7a6666;
+    line-height: 24px;
+
+}
+
+.product_img {
+    width: 215px;
+    height: 225px;
+    overflow: hidden;
+}
+
+.yogurt_1 {
+    background-image: url(../img/kiwi.png);
+    background-position-x: -42px;
+    background-position-y: 12px;
+}
+
+.yogurt_2 {
+    background-image: url(../img/mango.png);
+    background-position-x: -42px;
+    background-position-y: 12px;
+}
+
+.yogurt_3 {
+    background-image: url(../img/cantaloupe.png);
+    background-position-x: -42px;
+    background-position-y: 12px;
+}
+
+.yogurt_4 {
+    background-image: url(../img/blackberry.png);
+    background-position-x: -60px;
+    background-position-y: 30px;
+}
+
+.yogurt_5 {
+    background-image: url(../img/strawberry.png);
+    background-position-x: -60px;
+    background-position-y: 30px;
+}
+
+.yogurt_6 {
+    background-image: url(../img/blueberry.png);
+    background-position-x: -60px;
+    background-position-y: 30px;
+}
+
+.yogurt_7 {
+    background-image: url(../img/grapes.png);
+    background-position-x: -8px;
+    background-position-y: -20px;
+}
+
+.yogurt_8 {
+    background-image: url(../img/green_apple.png);
+    background-position-x: -8px;
+    background-position-y: -20px;
+}
+
+.yogurt_9 {
+    background-image: url(../img/pineapple.png);
+    background-position-x: -8px;
+    background-position-y: -20px;
+}
+
+.product_link {
+    font-family: "Lato";
+    font-size: 20px;
+    font-weight: 400;
+    color: #cb3362;
+    line-height: 24px;
+    text-transform: uppercase;
+    display: block;
+    padding: 10px 10px;
+    margin-top: 6px;
+    text-align: center;
+}
+
+.product_link:hover {
+    color:#c8c10d;
+}
 
 
 /* footer start________________________________ */
