@@ -1,0 +1,254 @@
+/* @font-face {
+    font-family: "Rammetto One";
+    src: url('myfont.woff2') format('woff2'),
+         url('../fonts/') format('woff'),
+         url('../fonts/RammettoOne-Regular.ttf') format('truetype');
+  } */
+
+  @font-face {
+    font-family: "Rammetto One";
+    src: url('../fonts/RammettoOne-Regular.ttf') format('truetype');    
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url('../fonts/lato-regular-webfont.woff') format('woff'),
+        url('../fonts/lato-regular-webfont.ttf') format('truetype');
+}
+  
+ @font-face {
+    font-family: "Roboto";
+    src: url('../fonts/roboto-regular-webfont.woff') format('woff'),
+        url('../fonts/roboto-regular-webfont.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Marga";
+    src: url('../fonts/magra-bold-webfont.woff') format('woff'),
+        url('../fonts/magra-bold-webfont.ttf') format('truetype');
+}
+
+/* @font-face {
+    font-family: "Arial MT";
+    src: url('../fonts/') format('woff'),
+        url('../fonts/magra-bold-webfont.ttf') format('truetype');
+} */
+
+
+
+
+
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    margin: 0 0;
+}
+
+.sab_link.active_page {
+    color:#cb3362;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* header start_______________________________ */
+.header_bg {
+    background-color: #edeaeb;
+}
+
+.header {
+    box-sizing: border-box;
+    
+    height: 120px;
+    padding-left: 110px;
+    padding-right: 110px;
+    margin: 0 auto;
+    
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header_logo {
+    display: inline-flex;
+    align-items: center;
+    width: 138px;
+    position: relative; 
+}
+
+.header_logo > span {
+    font-family: "Rammetto One";
+    color: #cb3362;
+    font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: -0.16px;
+}
+
+.header_logo span > span {
+    color: #c8c10d;
+    font-style: normal;
+    letter-spacing: -0.16px;
+    line-height: normal;
+    /* position: relative; */ 
+}
+
+.header_logo > span::after {
+    content: "";
+    position: absolute;
+    top: 35px;
+    right: 17px;
+    
+    width: 21px;
+    height: 14px;
+    
+    background-image: url("../img/logo_name.png");
+    background-repeat: no-repeat;
+}
+
+.header_menu {
+    max-height: 120px;
+    margin: auto 0 auto auto;
+}
+
+.header_list {
+    display: flex;
+}
+
+.header_list  > li {
+    padding-left: 37px;
+    padding-right: 37px; 
+}
+
+.header_list li:last-child {
+    padding-right: 0;
+}
+
+.header_list a {
+    display: block;
+    box-sizing: border-box;
+    
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    color: #7a6666;
+    font-family: "Lato";
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    
+    transition: 1s scale, color;
+}
+
+.header_list a:active,
+.header_list a:focus {
+    color: #cb3362;
+    scale: 1.1;
+}
+
+.header_list a:hover {
+    color: #c8c10d;
+    scale: 1.1;
+}
+nav > ul {
+    position: relative;
+}
+
+ nav > ul  ul {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s ease-in;
+    display: none;
+    top: 35px; 
+ }
+
+ nav > ul  ul.sab_list.active {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+
+.header_list > li:hover  ul {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+/* header end________________________________ */
+
+
+/* main start________________________________ */
+.product_bg {
+    background-color: #c8c10d;
+    height: 81px;
+    /* box-sizing: border-box; */
+}
+
+.product_h {
+    font-family: "Lato";
+    font-size: 30px;
+    font-weight: 400;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 81px;
+}
+
+
+
+
+
+/* footer start________________________________ */
+
+.footer_bg {
+    background-color: #cb3362;
+}
+
+.footer {
+    margin: 0 auto;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact_list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 59px;
+    margin-bottom: 35px;
+    width: 210px;
+}
+
+.contact_link {
+    text-decoration: none;
+    padding: 0;
+}
+
+.contact_list li {
+}
+
+.copyright {
+color: #ffffff;
+font-family: "Roboto";
+font-size: 12px;
+line-height: 15px;
+text-align: center;
+}
+
+.footer img {
+    width: 30px;
+    height: 30px;
+}
+/* footer end ____________________________________*/
+
