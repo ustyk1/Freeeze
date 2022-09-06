@@ -195,14 +195,20 @@ nav > ul {
     line-height: 81px;
 }
 
+.container.page_container {
+    height: 1000px;
+    padding: 100px 110px;
+    box-sizing: border-box; 
+}
 
 .articles_container {
     display: flex;
     flex-direction: row;
-    width: 880px;
+    width: 920px;
+    /* width: 100%; */
     height: 680px;
     justify-content: space-between;
-    margin: 100px 130px 34px 130px; 
+    /* margin: 100px 130px 34px 130px;  */
 }
 
 .sidebar {
@@ -355,10 +361,10 @@ nav > ul {
 
 .article_link.page_link {
     margin-top: 0;
-background-color: #cb3362;
-display: inline-block;
-margin-left: 350px;  
-margin-bottom: 140px;
+    background-color: #cb3362;
+    display: inline-block;
+    margin-left: 220px;  
+    margin-top: 65px;
 }
 
 .article_link.page_link:hover {

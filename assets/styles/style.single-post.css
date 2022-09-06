@@ -34,6 +34,7 @@
         url('../fonts/magra-bold-webfont.ttf') format('truetype');
 } */
 
+
 a {
     text-decoration: none;
 }
@@ -182,13 +183,13 @@ nav > ul {
 
 
 /* main start________________________________ */
-.product_bg {
+.page-header_bg {
     background-color: #c8c10d;
     height: 81px;
     /* box-sizing: border-box; */
 }
 
-.product_h {
+.page-header {
     font-family: "Lato";
     font-size: 30px;
     font-weight: 400;
@@ -199,131 +200,155 @@ nav > ul {
 }
 /* _______________________________________________ */
 
-.container.products {
+.container.page_container {
     height: 1000px;
-    width: 100%;
-    padding: 50px 110px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    padding: 100px 110px;
+    box-sizing: border-box; 
 }
-
-.yogurt_kind {
-    height: 275px;
-    width: 920px; 
+.content {
+    height: 680px;
+    width: 100%;
+   
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    box-sizing: border-box;
 }
 
-.yogurt_kind:nth-of-type(3) {
-    margin-top: 40px;
+.article {
+    width: 560px;
+    height: 670px;
 }
 
-.kind_descriptions {
-    width: 190px;
-    height: 150px;
-    align-self: center;
+.article_image {
+    width: 560px;
+    height: 343px;
+    background-image: url(../img/single-post_img.png);
+    background-position-x: center;
+    background-position-y: center;
 }
 
-.description_title {
-    font-family: "Marga";
+.article_text {
+    width: 560px;
+    height: 285px;
+    margin-top: 42px;
+}
+
+.article h2 { 
+    font-family: "Lato";
     font-size: 24px;
-    font-weight: 700;
-    color: #cb3362;
-    line-height: 24px;
-    margin-bottom: 30px;
+    font-weight: 400;
+    color:#cb3362;
+    /* line-height: 48px; */
+    text-transform: uppercase;
+    text-align: left;
 }
 
-.description_text {
+.article p:nth-of-type(1) { 
+    font-family: "Roboto";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px;
+    color:#7a6666;
+    text-align: left;  
+}
+
+.article p:nth-of-type(2),
+.article p:nth-of-type(3) { 
     font-family: "Roboto";
     font-size: 14px;
-    font-weight: 400;
-    color: #7a6666;
     line-height: 24px;
-
+    font-weight: 400;
+    color:#7a6666;
+    text-align: left;
+    margin-top: 16px;
 }
 
-.product_img {
-    width: 215px;
-    height: 225px;
-    overflow: hidden;
+.sidebar {
+    width: 280px;
+    height: 680px;
+    background-color: #efedee;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 44px;
+    padding-bottom: 61px;
 }
 
-.yogurt_1 {
-    background-image: url(../img/kiwi.png);
-    background-position-x: -42px;
-    background-position-y: 12px;
+.sidebar > h2 {
+    font-family: "Marga";
+    font-size: 30px;
+    font-weight: 700;
+    color:#cb3362;
 }
 
-.yogurt_2 {
-    background-image: url(../img/mango.png);
-    background-position-x: -42px;
-    background-position-y: 12px;
+ .sidebar_img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-image: url(../img/sidebar_img.png);
+    margin-top: 33px;
+    margin-bottom: 37px;
+ }
+
+.sidebar_text {
+    width: 192px;
+    height: 164px;
+    box-sizing: border-box;  
 }
 
-.yogurt_3 {
-    background-image: url(../img/cantaloupe.png);
-    background-position-x: -42px;
-    background-position-y: 12px;
-}
-
-.yogurt_4 {
-    background-image: url(../img/blackberry.png);
-    background-position-x: -60px;
-    background-position-y: 30px;
-}
-
-.yogurt_5 {
-    background-image: url(../img/strawberry.png);
-    background-position-x: -60px;
-    background-position-y: 30px;
-}
-
-.yogurt_6 {
-    background-image: url(../img/blueberry.png);
-    background-position-x: -60px;
-    background-position-y: 30px;
-}
-
-.yogurt_7 {
-    background-image: url(../img/grapes.png);
-    background-position-x: -8px;
-    background-position-y: -20px;
-}
-
-.yogurt_8 {
-    background-image: url(../img/green_apple.png);
-    background-position-x: -8px;
-    background-position-y: -20px;
-}
-
-.yogurt_9 {
-    background-image: url(../img/pineapple.png);
-    background-position-x: -8px;
-    background-position-y: -20px;
-}
-
-.product_link {
+.sidebar_text h2 { 
     font-family: "Lato";
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 400;
-    color: #cb3362;
-    line-height: 24px;
+    color:#cb3362;
+    /* line-height: 48px; */
     text-transform: uppercase;
-    display: block;
-    padding: 10px 10px;
-    margin-top: 6px;
     text-align: center;
 }
 
-.product_link:hover {
-    color:#c8c10d;
+.sidebar_text p:nth-of-type(1) { 
+    font-family: "Roboto";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px;
+    color:#7a6666;
+    text-align: center;  
 }
 
-/* main end________________________________ */
+.sidebar_text p:nth-of-type(2) { 
+    font-family: "Roboto";
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color:#7a6666;
+    text-align: center;
+    margin-top: 16px;
+}
+
+.article_link {
+    font-family: "Lato";
+    font-size: 16px;
+    font-weight: 700;
+    padding: 14px 31px 15px 30px;
+    color:#ffffff;
+    text-transform: uppercase;
+    display: inline-block;
+    background-color:#c8c10d;
+    margin-top: 65px;
+}
+
+.article_link:hover {
+    background-color:#cb3362;
+}
+
+.article_link.page_link {
+    margin-left: 193px;   
+}
+
+/* main end */
+
 
 /* footer start________________________________ */
 
@@ -369,4 +394,3 @@ text-align: center;
     height: 30px;
 }
 /* footer end ____________________________________*/
-
