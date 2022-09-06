@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/styles/styles.css">
-    <link rel="stylesheet" href="../assets/styles/style.single-post.css">
+    <link rel="stylesheet" href="../assets/styles/style.contact.css">
 
     <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
@@ -15,7 +15,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     
-    <title>Single post</title>
+    <title>Contact</title>
 </head>
 <body>
     <header class="header_bg"> 
@@ -29,23 +29,23 @@
                         <a href="../index.html" class="header_link">HOME</a>
                     </li>
                     <li>
-                        <a href="about.html" class="header_link">ABOUT</a>
+                        <a href="#" class="header_link">ABOUT</a>
                         <ul class="sab_list">
                             <li>
                                 <a href="product.html" class="sab_link">product</a>
                             </li>
                         </ul>
                     </li>
-                    <li class="">
+                    <li>
                         <a href="blog.html" class="header_link">BLOG</a>
-                        <ul class="sab_list active">
+                        <ul class="sab_list">
                             <li>
-                                <a href="#" class="sab_link active_page">single post</a>
+                                <a href="single-post.html" class="sab_link">single post</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="contact.html" class="header_link">CONTACT</a>
+                        <a href="#" class="header_link active_page">CONTACT</a>
                     </li>
                 </ul>
             </nav>
@@ -55,43 +55,54 @@
         <section class="page-header_bg">
             <div class="container">
                 <h1 class="page-header">
-                    single post
+                    contact
                 </h1>
             </div>
         </section>
-        <div class="container page_container">
-            <section class="content">
-                <article class="article">
-                    <div class="article_image">
-                    </div>
-                    <div class="article_text">
-                        <h2>
-                            new chills for summer
-                        </h2>
-                        <p>
-                            By Admin on November 28, 2023 
-                        </p>
-                        <p>
-                            You can replace all this text with your own text. You can remove any link to our website from this website template, you're free to use this website template without linking back to us. If you're having problems editing this website template, then don't hesitate to ask for help on the forum.                    </p>
-                        <p>
-                            You can replace all this text with your own text. You can remove any link to our website from this website template, you're free to use this website template without linking back to us. If you're having problems editing this website template, then don't hesitate to ask for help on the forum.                    </p>
-                    </div>
-                </article>
-                <aside class="sidebar">
-                    <h2>Recent Posts</h2>
-                    <div class="sidebar_img">
-                    </div>
-                    <div class="sidebar_text">
-                        <h2>on the diet</h2>
-                        <p>By Admin on November 28, 2023</p>
-                        <p>You can replace all this text with your own text. 
-                            You can remove any link to our website from this website template.</p>
-                    </div>
-                    <a class="article_link" href="#">read more</a>
-                </aside>
+        <div class="container map_container">
+            <section class="map_adress">
+                <div class="adress">
+                    <h2>
+                        unit 0123, abc building, bussiness park 
+                    </h2>
+                    <p>
+                        If you're having problems editing this website template, then don't hesitate to ask for help on the Forums.
+                    </p>
+                </div>
             </section>
-            <a class="article_link page_link" href="blog.html">back to blog</a>
         </div>
+        <section class="container page_container">
+            <form class="form" action="#">
+                <h2>
+                    inquiry form
+                </h2>
+                <div>
+                    <label for="Name" class="label">Name</label>
+                    <input type="text" id="Name" placeholder="Name" class="input">
+                </div>
+                <div>
+                    <label for="Email" class="label">Email</label>
+                    <input type="text" id="Email" placeholder="Email" class="input">
+                </div>
+                <div>
+                    <label for="Subject" class="label">Subject</label>
+                    <input checked type="text" id="Subject" placeholder="Subject" class="input"> 
+                </div>
+                <textarea name="text" placeholder="Share your thoughts" class="textarea" ></textarea>
+                <div>
+                    <button type="submit" class="button">Send</button>
+                </div>
+
+            </form>
+            <aside class="sidebar">
+                <h2>
+                    we'd love to hear from you. 
+                </h2>
+                <p>
+                    If you're having problems editing this website template, then don't hesitate to ask for help on the Forums.
+                </p>
+            </aside>
+        </section>
     </main>
     <footer class="footer_bg">
         <div class="container footer">
@@ -118,10 +129,9 @@
                 </li>
             </ul>
             <p class="copyright">
-                &#169; 2023 Freeeze. All Rights Reserved.
+                &#169 2023 Freeeze. All Rights Reserved.
             </p>
         </div>   
     </footer>
 </body>
 </html>
-

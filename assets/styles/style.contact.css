@@ -1,3 +1,4 @@
+
 /* @font-face {
     font-family: "Rammetto One";
     src: url('myfont.woff2') format('woff2'),
@@ -28,12 +29,6 @@
         url('../fonts/magra-bold-webfont.ttf') format('truetype');
 }
 
-/* @font-face {
-    font-family: "Arial MT";
-    src: url('../fonts/') format('woff'),
-        url('../fonts/magra-bold-webfont.ttf') format('truetype');
-} */
-
 
 a {
     text-decoration: none;
@@ -42,15 +37,14 @@ a {
 h1 {
     margin: 0 0;
 }
-
-.sab_link.active_page {
-    color:#cb3362;
-}
-
 .container {
     max-width: 1140px;
     margin: 0 auto;
     padding: 0;
+}
+
+.header_link.active_page {
+    color:#cb3362;
 }
 
 /* header start_______________________________ */
@@ -167,20 +161,12 @@ nav > ul {
     top: 35px; 
  }
 
- nav > ul  ul.sab_list.active {
-    visibility: visible;
-    opacity: 1;
-    display: block;
-}
-
-
 .header_list > li:hover  ul {
     visibility: visible;
     opacity: 1;
     display: block;
 }
 /* header end________________________________ */
-
 
 /* main start________________________________ */
 .page-header_bg {
@@ -200,41 +186,45 @@ nav > ul {
 }
 /* _______________________________________________ */
 
-.container.page_container {
-    height: 1000px;
-    padding: 100px 110px;
-    box-sizing: border-box; 
-}
-.content {
-    height: 680px;
-    width: 100%;
-   
+.container.map_container {
+    height: 250px;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.article {
-    width: 560px;
-    height: 670px;
-}
-
-.article_image {
-    width: 560px;
-    height: 343px;
-    background-image: url(../img/single-post_img.png);
+    padding: 40px 110px;
+    background-image: url(../img/map_bg.png);
+    background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: center;
 }
 
-.article_text {
-    width: 560px;
-    height: 285px;
-    margin-top: 42px;
+.map_adress {
+    width: 920x;
+    height: 170px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    opacity: 0.8;
+    position: relative;
 }
 
-.article h2 { 
+.adress {
+    width: 510px;
+    height: 70px;
+    padding: 50px 155px 50px 255px;
+    /* position: relative; */
+}
+
+.adress::before {
+    content: "";
+    width: 66px;
+    height: 105px;
+    background-image: url(../img/map_mark.png);
+    position: absolute;
+    left: 155px;
+    bottom: 33px;
+}
+
+.adress h2,
+.sidebar h2,
+.form h2 {
     font-family: "Lato";
     font-size: 24px;
     font-weight: 400;
@@ -244,114 +234,115 @@ nav > ul {
     text-align: left;
 }
 
-.article p:nth-of-type(1) { 
-    font-family: "Roboto";
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 24px;
-    color:#7a6666;
-    text-align: left;  
-}
-
-.article p:nth-of-type(2),
-.article p:nth-of-type(3) { 
+.adress p,
+.sidebar p {
     font-family: "Roboto";
     font-size: 14px;
-    line-height: 24px;
     font-weight: 400;
+    line-height: 24px;
     color:#7a6666;
     text-align: left;
-    margin-top: 16px;
+}
+
+.container.page_container {
+    height: 750px;
+    padding: 40px 110px;
+    /* пересмотреть */
+    box-sizing: border-box; 
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.form {
+    width: 560px;    
+}
+
+.form h2 {
+    padding-bottom: 40px;
+}
+
+.label {
+    visibility: hidden;
+    position: absolute;
+}
+
+.input {
+    font-family: "Lato";
+    font-size: 14px;
+    color: #7a6666;
+    border: 2px solid #b6adb0;
+    display: block;
+    padding-left: 15px;
+    width: 560px;
+    height: 40px;
+    box-sizing: border-box;
+    outline: none;
+    margin-bottom: 8px;
+    
+}
+.input:active,
+.input:focus,
+.input:hover {
+    border-color: #cb3362;
+    border-width: 2px;
+}
+
+.textarea {
+    width: 560px;
+    height: 280px;
+    font-family: "Lato";
+    font-size: 14px;
+    color: #7a6666;
+    border: 2px solid #b6adb0;
+    /* background-color: #f3f3f3; */
+    padding: 15px;
+    box-sizing: border-box;
+    outline: none;
+    margin-bottom: 8px;
+}
+
+.textarea:focus,
+.textarea:hover {
+    border: 2px solid #cb3362;
+}
+
+.button {
+    font-family: "Lato";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #7a6666;
+    text-transform: uppercase;
+    background-color: #ffffff;
+    border: 2px solid #c5acb4;
+    padding: 12px 50px;
+}
+
+.button:focus,
+.button:hover {
+    border: 2px solid #cb3362;
 }
 
 .sidebar {
     width: 280px;
-    height: 680px;
-    background-color: #efedee;
+    height: 230px;
     box-sizing: border-box;
+    background-color: #efedee;
+    padding: 25px 39px 25px 39px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-top: 44px;
-    padding-bottom: 61px;
+    justify-content: space-between;
 }
 
-.sidebar > h2 {
-    font-family: "Marga";
-    font-size: 30px;
-    font-weight: 700;
-    color:#cb3362;
-}
-
- .sidebar_img {
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    background-image: url(../img/sidebar_img.png);
-    margin-top: 33px;
-    margin-bottom: 37px;
- }
-
-.sidebar_text {
-    width: 192px;
-    height: 164px;
-    box-sizing: border-box;  
-}
-
-.sidebar_text h2 { 
-    font-family: "Lato";
-    font-size: 24px;
-    font-weight: 400;
-    color:#cb3362;
-    /* line-height: 48px; */
-    text-transform: uppercase;
+.sidebar h2,
+.sidebar p {
     text-align: center;
 }
-
-.sidebar_text p:nth-of-type(1) { 
-    font-family: "Roboto";
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 24px;
-    color:#7a6666;
-    text-align: center;  
-}
-
-.sidebar_text p:nth-of-type(2) { 
-    font-family: "Roboto";
-    font-size: 14px;
-    line-height: 24px;
-    font-weight: 400;
-    color:#7a6666;
-    text-align: center;
-    margin-top: 16px;
-}
-
-.article_link {
-    font-family: "Lato";
-    font-size: 16px;
-    font-weight: 700;
-    padding: 14px 31px 15px 30px;
-    color:#ffffff;
-    text-transform: uppercase;
-    display: inline-block;
-    background-color:#c8c10d;
-    margin-top: 65px;
-}
-
-.article_link:hover {
-    background-color:#cb3362;
-}
-
-.article_link.page_link {
-    margin-left: 193px;   
-}
-
-/* main end */
-
+/* main end________________________________ */
 
 /* footer start________________________________ */
-
 .footer_bg {
     background-color: #cb3362;
 }
@@ -377,7 +368,6 @@ nav > ul {
     text-decoration: none;
     padding: 0;
 }
-
 
 .copyright {
 color: #ffffff;
