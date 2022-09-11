@@ -110,6 +110,7 @@ h1 {
 .header_menu {
     max-height: 120px;
     margin: auto 0 auto auto;
+    position: relative;
 }
 
 .header_list {
@@ -178,7 +179,7 @@ nav > ul {
     opacity: 1;
     display: block;
 }
-/* header end________________________________ */
+
 
 
 /* main start________________________________ */
