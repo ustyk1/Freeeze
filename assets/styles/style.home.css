@@ -208,14 +208,15 @@ nav > ul {
         flex-direction: column;
         align-items: center;
         background-color: rgba(255,255,255, 0.3) ;
+        -webkit-backdrop-filter: blur(6px);
         backdrop-filter: blur(6px);
         padding: 50px 20px 20px 20px;
         transform: translateX(120%);
-        visibility: hidden;
+        /* visibility: hidden; */
         position: absolute;
         right: 0;
         left: 0;
-        top: 78px;
+        top: 80px;
         z-index: 1;
         transition: transform 0.5s ease-in-out;
         box-shadow: -5px 0px 10px 0px rgba(203, 51, 98, 0.3);
@@ -268,7 +269,7 @@ nav > ul {
 
     .header_menu input[type="checkbox"]:checked ~ .header_list {
         transform: translateX(0);
-        visibility: visible;
+        /* visibility: visible; */
     }
     
     .header_menu input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
@@ -287,7 +288,7 @@ nav > ul {
         position: static;
     }
     
-    nav > ul  ul {
+    nav ul ul {
         position: static;
         visibility: visible;
         opacity: 1;
