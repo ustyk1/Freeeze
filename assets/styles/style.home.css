@@ -194,6 +194,10 @@ nav > ul {
         overflow-x: hidden;
     }
 
+    .stopScroll {
+        overflow: hidden;
+    }
+
     .header {
         height: auto;
         padding: 15px 30px;
@@ -223,6 +227,7 @@ nav > ul {
         height: 100vh;
         justify-content: flex-start;
         box-sizing: border-box;
+        
     }
     
     .header_menu .header_list a {
@@ -307,6 +312,9 @@ nav > ul {
     .header_list > li:last-child {
         padding-right: 37px;
     }
+
+    
+
 } 
 /* header end________________________________ */
 
