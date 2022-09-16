@@ -24,6 +24,12 @@
                 <span>Freee<span>z</span>e</span>
             </div>
             <nav class="header_menu">
+                <input type="checkbox" name="hamburger-toggle" id="hamburger-toggle">
+                <label class="hamburger-lines" for="hamburger-toggle">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </label>
                 <ul class="header_list">
                     <li>
                         <a href="../index.html" class="header_link">HOME</a>
@@ -36,7 +42,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="">
+                    <li>
                         <a href="blog.html" class="header_link">BLOG</a>
                         <ul class="sab_list active">
                             <li>
@@ -52,9 +58,9 @@
         </div>
     </header>
     <main>
-        <section class="page-header_bg">
+        <section class="page_header_bg">
             <div class="container">
-                <h1 class="page-header">
+                <h1 class="page_header">
                     single post
                 </h1>
             </div>
@@ -118,10 +124,16 @@
                 </li>
             </ul>
             <p class="copyright">
-                &#169; 2023 Freeeze. All Rights Reserved.
+                &#169 2023 Freeeze. All Rights Reserved.
             </p>
         </div>   
     </footer>
 </body>
+<script>
+    document.querySelector('#hamburger-toggle').addEventListener('click', () => {
+        document.querySelector('body').classList.toggle('stopScroll');
+        document.querySelector('html').classList.toggle('stopScroll')
+    });
+</script>
 </html>
 
