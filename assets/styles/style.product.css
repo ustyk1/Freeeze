@@ -56,10 +56,18 @@ h1 {
 .header_bg {
     background-color: #edeaeb;
 }
+.header_bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    box-shadow: 1px 16px 10px -12px rgba(203, 51, 98, 0.3);
+}
 
 .header {
     box-sizing: border-box;
-    
+    position: relative;
     height: 120px;
     padding-left: 110px;
     padding-right: 110px;
@@ -110,11 +118,11 @@ h1 {
 .header_menu {
     max-height: 120px;
     margin: auto 0 auto auto;
-    position: relative;
 }
 
 .header_list {
     display: flex;
+    justify-content: flex-end;
 }
 
 .header_list  > li {
@@ -154,25 +162,25 @@ h1 {
     color: #c8c10d;
     scale: 1.1;
 }
+
 nav > ul {
     position: relative;
 }
 
- nav > ul  ul {
+ nav > ul  ul { 
     position: absolute;
     visibility: hidden;
     opacity: 0;
     transition: .5s ease-in;
     display: none;
     top: 35px; 
- }
+}
 
- nav > ul  ul.sab_list.active {
+nav > ul  ul.sab_list.active {
     visibility: visible;
     opacity: 1;
     display: block;
 }
-
 
 .header_list > li:hover  ul {
     visibility: visible;
@@ -180,16 +188,158 @@ nav > ul {
     display: block;
 }
 
+/* .header_menu {
+    overflow: hidden;
+    width: 100%;
+} */
 
+.header_menu input[name="hamburger-toggle"],
+.yogurt_kind input[name="hamburger-toggle"] {
+    display: none;
+}
+
+.header_menu .hamburger-lines,
+.yogurt_kind .chevron {
+    display: none;
+}
+
+@media (max-width: 1139px) {
+
+    body, html {
+        width: 100%; 
+        overflow-x: hidden;
+    }
+
+    .stopScroll {
+        overflow: hidden;
+    }
+
+    .header {
+        height: auto;
+        padding: 15px 30px;
+        position: relative;
+    }
+
+    .header_logo > span::after {
+        top: 0;
+    }
+    
+    .header_menu .header_list {
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(255,255,255, 0.3) ;
+        -webkit-backdrop-filter: blur(6px);
+        backdrop-filter: blur(6px);
+        padding: 50px 20px 20px 20px;
+        transform: translateX(120%);
+        /* visibility: hidden; */
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 80px;
+        z-index: 1;
+        transition: transform 0.5s ease-in-out;
+        box-shadow: -5px 0px 10px 0px rgba(203, 51, 98, 0.3);
+        height: 100vh;
+        justify-content: flex-start;
+        box-sizing: border-box;
+        
+    }
+    
+    .header_menu .header_list a {
+        text-align: center;
+    }
+
+    .header_menu .hamburger-lines {
+
+        display: block;
+        height: 23px;
+        width: 35px;
+        position: absolute;
+        top: 17px;
+        right: 30px;
+        top: 30px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .header_menu .hamburger-lines .line {
+        display: block;
+        /* margin-bottom: 5px; */
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #cb3362;
+    }
+    
+    .header_menu .hamburger-lines .line1 {
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+    }
+    
+    .header_menu .hamburger-lines .line2 {
+        transition: transform 0.2s ease-in-out;
+    }
+    
+    .header_menu .hamburger-lines .line3 {
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .header_menu input[type="checkbox"]:checked ~ .header_list {
+        transform: translateX(0);
+        /* visibility: visible; */
+    }
+    
+    .header_menu input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+        transform: rotate(35deg);
+    }
+    
+    .header_menu input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+        transform: scaleY(0);
+    }
+    
+    .header_menu input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+        transform: rotate(-35deg);
+    }
+
+    nav > ul {
+        position: static;
+    }
+    
+    nav ul ul {
+        position: static;
+        visibility: visible;
+        opacity: 1;
+        display: block;
+        top: 35px; 
+    }
+
+    .header_list a.header_link {       
+        font-size: 24px;
+    }
+
+    nav > ul > li {
+        padding-top: 15px;
+    }
+
+    .header_list > li:last-child {
+        padding-right: 37px;
+    }
+} 
+/* header end________________________________ */
 
 /* main start________________________________ */
-.product_bg {
+.page_header_bg {
     background-color: #c8c10d;
     height: 81px;
+    margin-top: 120px;
     /* box-sizing: border-box; */
 }
 
-.product_h {
+.page_header {
     font-family: "Lato";
     font-size: 30px;
     font-weight: 400;
@@ -197,6 +347,18 @@ nav > ul {
     text-align: center;
     text-transform: uppercase;
     line-height: 81px;
+}
+
+@media (max-width: 1139px) {
+    .page_header_bg {
+        margin-top: 81.2px;
+        height: 48px;
+    }
+
+    .page_header {
+        font-size: 24px;
+        line-height: 48px;
+    }
 }
 /* _______________________________________________ */
 
@@ -217,6 +379,13 @@ nav > ul {
     flex-direction: row;
     justify-content: space-between;
     box-sizing: border-box;
+}
+
+.product_wraper {
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+    /* position: relative; */
 }
 
 .yogurt_kind:nth-of-type(3) {
@@ -324,28 +493,200 @@ nav > ul {
     color:#c8c10d;
 }
 
+@media (max-width: 1139px) {
+    .container.products {
+        height: 100%;
+        width: 100%;
+        padding: 30px 30px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .yogurt_kind {
+        height: 100%;
+        width: 100%; 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .yogurt_kind .product_wraper {
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+        height: 0;
+        overflow: hidden;
+        transition: all .3s;
+        height: 0px;
+        box-sizing: border-box;
+        /* display: none; */
+    }
+
+    .yogurt_kind .chevron {
+        display: block;
+        font-size: 25px;
+        color: #cb3362;
+        transform: rotate(180deg);
+        position: absolute;
+        
+        padding: 10px;
+        right: 30px;
+        top: 10px;
+        z-index: 2;
+        transition: all .3s;
+    }
+        
+    .yogurt_kind input[type="checkbox"]:checked ~ .chevron {
+        transform: rotate(0deg);
+    }
+    
+    .yogurt_kind input[type="checkbox"].chevron-1:checked ~ .product_wraper {
+        height: 700px;
+        margin-top: 15px;
+    }
+
+    .yogurt_kind input[type="checkbox"].chevron-2:checked ~ .product_wraper {
+        height: 640px;
+        margin-top: 15px;
+    }
+
+    .yogurt_kind input[type="checkbox"].chevron-3:checked ~ .product_wraper {
+        height: 750px;
+        margin-top: 15px;
+    }
+
+    .kind_descriptions {
+        width: 100%;
+        height: 150px;
+        align-self: center;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .description_title {
+        margin-bottom: 15px;
+        margin-left: 25px;
+        text-align: left;
+    }
+
+    .description_text {
+        text-align: justify;
+    }
+    
+    .yogurt_kind:nth-of-type(1) .product_img {
+        width: 175px;
+        height: 175px;
+        background-size: 250px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    .yogurt_1 {
+        background-image: url(../img/kiwi.png);
+        background-position-x: -40px;
+        background-position-y: -15px;
+    }
+
+    .yogurt_2 {
+        background-image: url(../img/mango.png);
+        background-position-x: -40px;
+        background-position-y: -15px;
+    }
+
+    .yogurt_3 {
+        background-image: url(../img/cantaloupe.png);
+        background-position-x: -40px;
+        background-position-y: -15px;
+    }
+    
+    .yogurt_kind:nth-of-type(2) .product_img {
+        width: 175px;
+        height: 160px;
+        background-size: 285px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    .yogurt_4 {
+        background-image: url(../img/blackberry.png);
+        background-position-x: -58px;
+        background-position-y: -15px;
+    }
+
+    .yogurt_5 {
+        background-image: url(../img/strawberry.png);
+        background-position-x: -58px;
+        background-position-y: -15px;
+    }
+
+    .yogurt_6 {
+        background-image: url(../img/blueberry.png);
+        background-position-x: -58px;
+        background-position-y: -15px;
+    }
+
+    .yogurt_kind:nth-of-type(3) .product_img {
+        width: 175px;
+        height: 195px;
+        background-size: 205px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    .yogurt_7 {
+        background-image: url(../img/grapes.png);
+        background-position-x: -10px;
+        background-position-y: -20px;
+    }
+
+    .yogurt_8 {
+        background-image: url(../img/green_apple.png);
+        background-position-x: -10px;
+        background-position-y: -20px;
+    }
+
+    .yogurt_9 {
+        background-image: url(../img/pineapple.png);
+        background-position-x: -10px;
+        background-position-y: -20px;
+    }
+    
+    .yogurt_kind:nth-of-type(3) {
+        margin-top: 0px;
+    }
+
+    .product_link {
+        font-size: 20px;
+        padding: 5px 10px;
+        margin-top: 6px;
+        text-align: center;
+    }
+}   
 /* main end________________________________ */
 
 /* footer start________________________________ */
 
 .footer_bg {
-    background-color: #cb3362;
+    background-color: #cb3362 ;
 }
 
 .footer {
     margin: 0 auto;
     height: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    box-sizing: border-box;
+    padding-top: 59px;
+    padding-bottom: 59px;
 }
 
 .contact_list{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 59px;
-    margin-bottom: 35px;
+    margin: 0 auto;
     width: 210px;
 }
 
@@ -354,18 +695,32 @@ nav > ul {
     padding: 0;
 }
 
-
 .copyright {
 color: #ffffff;
 font-family: "Roboto";
 font-size: 12px;
 line-height: 15px;
 text-align: center;
+margin-top: 30px;
 }
 
 .footer img {
     width: 30px;
     height: 30px;
+}
+
+@media (max-width: 1140px) {
+    .footer {
+        /* margin: 0 auto; */
+        height: auto;
+        box-sizing: border-box;
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
+
+    .copyright {
+        margin-top: 15px;
+    }   
 }
 /* footer end ____________________________________*/
 
